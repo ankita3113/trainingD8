@@ -1,0 +1,25 @@
+uuid: 0e925c9c-98f5-42f9-bb05-06fef0e8a957
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:rotators:af443edf-96a7-4a40-9368-a452db0c99c3'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: testblockrotators
+theme: bartik
+region: featured_top
+weight: 0
+provider: null
+plugin: 'block_content:af443edf-96a7-4a40-9368-a452db0c99c3'
+settings:
+  id: 'block_content:af443edf-96a7-4a40-9368-a452db0c99c3'
+  label: 'Test Block Rotators'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
