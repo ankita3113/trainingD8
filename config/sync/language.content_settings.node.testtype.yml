@@ -1,0 +1,18 @@
+uuid: 02373a99-23c4-4637-9067-917d61e3882f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.testtype
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.testtype
+target_entity_type_id: node
+target_bundle: testtype
+default_langcode: site_default
+language_alterable: true

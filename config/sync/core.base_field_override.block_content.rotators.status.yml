@@ -1,0 +1,22 @@
+uuid: 107d2b54-8938-495e-8053-f79d46cb1359
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.rotators
+id: block_content.rotators.status
+field_name: status
+entity_type: block_content
+bundle: rotators
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

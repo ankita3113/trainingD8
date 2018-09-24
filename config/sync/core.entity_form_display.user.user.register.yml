@@ -77,3 +77,4 @@ hidden:
   field_activity: true
   field_professional: true
   field_qualification: true
+  langcode: true
