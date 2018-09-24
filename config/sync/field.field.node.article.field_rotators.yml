@@ -1,0 +1,28 @@
+uuid: 06a4e20f-7398-42d4-ace6-ea20075c2dde
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.rotators
+    - field.storage.node.field_rotators
+    - node.type.article
+id: node.article.field_rotators
+field_name: field_rotators
+entity_type: node
+bundle: article
+label: rotators
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      rotators: rotators
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
