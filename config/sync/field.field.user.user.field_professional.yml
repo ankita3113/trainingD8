@@ -1,0 +1,21 @@
+uuid: 38926c20-a928-403d-80cd-f5176fe13467
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_professional
+  module:
+    - options
+    - user
+id: user.user.field_professional
+field_name: field_professional
+entity_type: user
+bundle: user
+label: Profession
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
