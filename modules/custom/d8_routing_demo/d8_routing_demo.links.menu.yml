@@ -1,0 +1,25 @@
+d8_routing_demo.hello_world:
+  title: 'Hello World'
+  description: 'Menu link for hello world page'
+  route_name: d8_routing_demo.hello_world
+  expanded: 1
+  menu_name: main
+  weight: 100
+
+d8_routing_demo.hello_ankita:
+  title: 'Hello Ankita'
+  description: 'Menu link for hello ankita page'
+  parent: d8_routing_demo.hello_world
+  route_name: d8_routing_demo.hello_dynamic
+  expanded: 1
+  route_parameters: {name: 'Ankita'}
+  menu_name: main
+  weight: 10
+
+d8_routing_demo.hello_user_1:
+  title: 'Hello User 1'
+  description: 'Menu link for hello User 1 page'
+  parent: d8_routing_demo.hello_ankita
+  route_name: d8_routing_demo.hello_dynamic_entity
+  route_parameters: {user: 1}
+  menu_name: main
