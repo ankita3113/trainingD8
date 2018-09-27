@@ -1,0 +1,9 @@
+services:
+  d8_routing_demo.data_controller:
+    class: Drupal\d8_routing_demo\Controller\DataController
+    arguments: ['@database']  
+  d8_riuting_demo.kernel_response_subscriber:
+    class: Drupal\d8_routing_demo\EventSubscriber\KernelResponseSubscriber
+    arguments: ['@path.current']
+    tags:
+      - { name: event_subscriber }

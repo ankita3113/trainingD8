@@ -1,12 +1,9 @@
-uuid: c8f17cca-326a-42d3-b7f7-144eea3d9a61
+uuid: f130a53c-a3b3-4328-954f-4a981619a1c6
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:1b338099-e3f0-41e3-be37-affbf9e567c5'
   module:
-    - block_content
-    - language
+    - d8_routing_demo
   theme:
     - bartik
 id: testblock
@@ -14,20 +11,10 @@ theme: bartik
 region: highlighted
 weight: 0
 provider: null
-plugin: 'block_content:1b338099-e3f0-41e3-be37-affbf9e567c5'
+plugin: test_block
 settings:
-  id: 'block_content:1b338099-e3f0-41e3-be37-affbf9e567c5'
-  label: 'Test Block '
-  provider: block_content
+  id: test_block
+  label: 'Test block'
+  provider: d8_routing_demo
   label_display: visible
-  status: true
-  info: ''
-  view_mode: full
-visibility:
-  language:
-    id: language
-    langcodes:
-      en: en
-    negate: false
-    context_mapping:
-      language: '@language.current_language_context:language_interface'
+visibility: {  }

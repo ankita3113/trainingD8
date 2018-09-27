@@ -2,10 +2,6 @@ uuid: 6f8bd979-e7df-4e69-be87-41e9bb1a4698
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:rotators:af443edf-96a7-4a40-9368-a452db0c99c3'
-  module:
-    - block_content
   theme:
     - bartik
 id: testblockrotators_2
