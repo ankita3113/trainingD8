@@ -1,0 +1,4 @@
+services:
+  d8_routing_demo.data_controller:
+    class: Drupal\d8_routing_demo\Controller\DataController
+    arguments: ['@database']

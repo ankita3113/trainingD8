@@ -4,31 +4,25 @@ namespace Drupal\d8_routing_demo\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\Core\Database\Connection;
+use Drupal\d8_routing_demo\Controller\DataController;
 
 class DIForm extends FormBase{
-    protected $db;
+    protected $dc;
 
-  public function __construct(Connection $db) {
-    $this->db = $db;
+  public function __construct(DataController $dc) {
+    $this->dc = $dc;
   }
  public function getFormId() {
     return 'd8_routing_demo_di_form';
   }
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('database')
+      $container->get('d8_routing_demo.data_controller')
     );
   }
 public function buildForm(array $form, FormStateInterface $form_state) {
   
-    $results = $this->db->select('d8_demo', 'dd')
-      ->fields('dd')
-      ->orderBy('id', 'DESC')
-      ->range(0,1)
-      ->execute()
-      ->fetchAll();
-    $last_value = $results[0];
+    $last_value = $this->dc->getLastEntry();
 
     $form ['first_name'] = [
       '#type' => 'textfield',
@@ -54,12 +48,10 @@ public function buildForm(array $form, FormStateInterface $form_state) {
     return $form;
 }
 public function SubmitForm(array &$form, FormStateInterface $form_state){
-$this->db->insert('d8_demo')
-      ->fields([
-        'first_name' => $form_state->getValue('first_name'),
-        'last_name' => $form_state->getValue('last_name'),
-      ])
-      ->execute();
+  $this->dc->insertToTable(
+  $form_state->getValue('first_name'),
+  $form_state->getValue('last_name')
+    );
     $this->messenger()->addMessage(
       $this->t('Form submitted successfully.')
     );
