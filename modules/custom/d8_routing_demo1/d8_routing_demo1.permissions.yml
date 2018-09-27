@@ -1,0 +1,5 @@
+
+access node content:
+  title: 'Access node content'
+  description: 'Allow access to my content'
+  restrict access: 'true'

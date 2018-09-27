@@ -1,0 +1,25 @@
+
+d8_routing_demo1.default_controller_helloWorld:
+  path: 'hello-world'
+  defaults:
+    _controller: '\Drupal\d8_routing_demo1\Controller\DefaultController::helloWorld'
+    _title: 'Hello World'
+  requirements:
+    _permission: 'access content'
+
+d8_routing_demo1.route_controller_helloDynamic:
+  path: 'hello/{name}'
+  defaults:
+    _controller: '\Drupal\d8_routing_demo1\Controller\RouteController::helloDynamic'
+    _title: 'Hello Dynamic'
+  requirements:
+    _permission: 'access content'
+
+d8_routing_demo1.simple_form:
+  path: 'simple-form'
+  defaults:
+    _form: '\Drupal\d8_routing_demo1\Form\SimpleForm'
+    _title: 'SimpleForm'
+  requirements:
+    _access: 'TRUE'
+  
